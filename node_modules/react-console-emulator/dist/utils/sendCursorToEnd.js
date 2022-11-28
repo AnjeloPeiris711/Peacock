@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;var _default=function(a){if(a){var b=a.selectionStart,c=a.selectionEnd;setTimeout(function(){return a.setSelectionRange(b,c)},10)}};exports["default"]=_default;

@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Peacock",
+  "version": "0.1.0",
+  "icons": {
+      "16": "assets/images/peacock.png",
+      "48": "assets/images/peacock.png",
+      "128": "assets/images/peacock.png"
+  },
+  "chrome_url_overrides":{
+    "newtab": "index.html"
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;var _default=function(a,b,c){if(c){for(var d,e=0,f=Object.keys(a);e<f.length;e++)if(d=f[e],new RegExp("^".concat(b,"$"),"gi").test(d))return{exists:!0,command:d};return{exists:!1,command:null}}return{exists:b in a,command:b}};exports["default"]=_default;

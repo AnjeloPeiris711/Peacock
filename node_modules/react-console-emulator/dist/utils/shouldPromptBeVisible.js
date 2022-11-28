@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;var _default=function(a,b){var c=!b.readOnly,d=b.hidePromptWhenDisabled,e=b.disableOnProcess,f=b.disabled,g=a.processing;if(d){if(f)return!1;if(e&&g)return!1}return c};exports["default"]=_default;
