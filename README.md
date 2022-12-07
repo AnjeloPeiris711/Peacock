@@ -1,17 +1,19 @@
-# Peac🦚ck
-A Terminal. 🐱‍💻
+# Peac🦚ck>
+Building an API-centric hardware-accessible
+browser extension 
 
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logoColor=white&label=Powered%20By)
+![Junior](https://img.shields.io/badge/POWERED%20BY-Junior-brightgreen?style=for-the-badge&logoColor=white&label=Powered%20By)
 
 ### Made Using-
-- ⚛ Framework [ReactJS](https://reactjs.org/)
-- 💻 Terminal [react-console-emulator](https://github.com/linuswillner/react-console-emulator)
+- ⚛  Framework [ReactJS](https://reactjs.org/)
+- 🎮 Console [react-console-emulator](https://github.com/linuswillner/react-console-emulator)
+- 🖖 Split-Panel [@devbookhq/splitter](https://www.npmjs.com/package/@devbookhq/splitter)
 - 🚀 Deployed using [Linode](https://)
 
 ### Running Locally 🚀
 Clone the repos's main branch.
 ```sh
-$ git clone -b main
+$ git clone 
 ```
 Change directory.
 ```sh
