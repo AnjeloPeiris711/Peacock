@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url(../assets/images/sl_040320_29590_25.jpg);
+  /*background-image: linear-gradient(rgba(176,0,32,1), rgba(0,0,0,1));*/
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -13,6 +13,7 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color: #000000 ;
 }
 
 .App {
@@ -52,7 +53,18 @@ pre {
   outline: none;
   color: #ffff;
 }
-
+.buttonWhite{
+ background-color: white;
+ border-color: black;
+ width: 15px;
+ height: 15px;
+}
+.buttonDark{
+  background-color: black;
+  border-color: white;
+  width: 15px;
+  height: 15px;
+}
 ::-webkit-scrollbar {
   scroll-behavior: auto;
   width: 5px;
@@ -67,12 +79,12 @@ pre {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #A020F0;
+  background: #FFFFFF;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A020F0;
+  background: #FFFFFF;
 }
 
 .container {
@@ -85,7 +97,7 @@ pre {
   border-radius: 10px;
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  border: 1px solid #bd93f9;
+  border: 1px solid #b00020;
 }
 .split {
   height: 100%;
@@ -101,7 +113,7 @@ pre {
   padding: 0 1px;
   height: 5px;
   width: 5px;
-  background: green;
+  background:rgba(128, 128, 128, 0.5);
 }
 .custom-gutter:hover {
   cursor: col-resize;

@@ -5,13 +5,19 @@ import ReactSplit, { SplitDirection } from '@devbookhq/splitter';
 export default function App() {
     useEffect(()=>{
         document.addEventListener('keydown',SplitShortKeys,true)
-
+        document.addEventListener('mousemove',SplitPoint,true)
     },[])
     let [insertChildrenHorizontal, setInsertChildrenHorizontal] = useState(false)
     let [insertChildrenHorizontalVertical,SetInsertChildrenHorizontalVertical] = useState(false)
     let [insertChildrenVertical,SetInsertChildrenVertical] = useState(false)
     let [insertChildrenVerticalHorizontal,SetInsertChildrenVerticalHorizontal] = useState(false)
-    const a = "10"
+    let positionX = []
+    let positionY =[]
+    const SplitPoint=(p)=> {
+        console.log(p.x, p.y)
+        positionX = p.x;
+        positionY = p.y;
+    }
     const SplitShortKeys=(e)=> {
         // splitRight
         if (e.altKey && e.shiftKey && e.key === "+") {
@@ -29,17 +35,25 @@ export default function App() {
             console.log("SplitBottom");
             setTimeout(() => {
                 SetInsertChildrenVertical(true)
-                SetInsertChildrenHorizontalVertical(true)
+                if((590<=positionX)&&(96<=positionY)){
+                    SetInsertChildrenHorizontalVertical(true)
+                }
             }, 10)
         }
         // ExitSplit
         if(e.key==="Escape"){
             console.log("Escape")
-            setTimeout(()=>{
-                if(a==10) {
-                    SetInsertChildrenHorizontalVertical(false)
+            setTimeout(()=> {
+                   if ((590<=positionX)&&(730<=positionY)) {
+                       SetInsertChildrenHorizontalVertical(false)
+                    }
+                   else if((590<=positionX)&&(96<=positionY)){
+                        setInsertChildrenHorizontal(false)
+                    }
+                    else if((140<=positionX)&&(730<=positionY)){
+                        SetInsertChildrenVertical(false)
                 }
-            }, 10)
+              }, 10)
         }
     }
     return (
