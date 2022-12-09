@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
-import getcat from "../../utils/cat"
-import getnp from "../../utils/spotify"
+import getcat from "../utils/cat"
+import getnp from "../utils/cat"
 export default {
     commands: {
         echo: {
@@ -42,6 +42,10 @@ export default {
             cat: {
                 description: 'Get a cute cat image.',
                 usage: 'cat',
+            },
+            theam:{
+                description: 'Change Theam',
+                usage: 'theam',
             },
             usb: {
                 description: 'Connect Usb to terminal',

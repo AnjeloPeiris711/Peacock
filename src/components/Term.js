@@ -1,8 +1,8 @@
 import Terminal from 'react-console-emulator'
 import commands from '../components/Commands/commands.js'
 import React from 'react'
-import figlet from 'figlet';
-import getcat from '../utils/cat'
+import getcat from '../components/utils/cat';
+// import getssh from '../components/utils/sshmy'
 export default function Term() {
     const cmds = commands.commands
     const owrs = commands.overwrites
@@ -103,18 +103,39 @@ export default function Term() {
                         `
                     }
                 },
-                WhiteTheam:{
+                theam:{
                     description:'Change Theam',
-                    usage: 'WhiteTheam',
+                    usage: 'team',
                     fn: () => {
-                        terminal.current.pushToStdout(document.body.style.background = 'white')
+                        function white(e) {
+                            document.body.style.background = '#ffffff'
+                        }
+                        function dark(e){
+                            document.body.style.background = '#000000'
+                        }
+                        function brightBlue(e){
+                            document.body.style.background = '#3B78FF'
+                        }
+                        function brightPurple(e){
+                            document.body.style.background = '#B4009E'
+                        }
+                        function brightYellow(e){
+                            document.body.style.background = '#F9F1A5'
+                        }
+                        terminal.current.pushToStdout(<button className={"btn1"} onClick={white}></button>)
+                        terminal.current.pushToStdout(<button className={"btn2"} onClick={dark}></button>)
+                        terminal.current.pushToStdout(<button className={"btn3"} onClick={brightBlue}></button>)
+                        terminal.current.pushToStdout(<button className={"btn4"} onClick={brightPurple}></button>)
+                        terminal.current.pushToStdout(<button className={"btn5"} onClick={brightYellow}></button>)
                     }
                 },
-                DarkTheam:{
-                    description:'Change Theam',
-                    usage: 'DarkTheam',
-                    fn: () => {
-                        terminal.current.pushToStdout(document.body.style.background = 'black')
+                ssh:{
+                    description:'SSH conection',
+                    usage: 'ssh',
+                    fn: async () => {
+                        // const data = await getssh()
+                        terminal.current.pushToStdout("getting ssh")
+                        // terminal.current.pushToStdout(data)
                     }
                 },
                 exit:{

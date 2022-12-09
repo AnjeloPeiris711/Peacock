@@ -108,7 +108,45 @@ pre {
   overflow-x: hidden;
   padding-top: 20px;
 }
-
+.btn1 {
+  border-radius: 15px;
+  height: 20px;
+  width: 20px;
+  float: left;
+  margin:5px;
+  background: #DDDDDD;
+}
+.btn2 {
+  border-radius: 15px;
+  height: 20px;
+  width: 20px;
+  float: left;
+  margin:5px;
+  background: #000000;
+}
+.btn3 {
+  border-radius: 15px;
+  height: 20px;
+  width: 20px;
+  float: left;
+  margin:5px;
+  background: #3B78FF;
+}
+.btn4 {
+  border-radius: 15px;
+  height: 20px;
+  width: 20px;
+  float: left;
+  margin:5px;
+  background: #B4009E;
+}
+.btn5 {
+  border-radius: 15px;
+  height: 20px;
+  width: 20px;
+  margin:5px;
+  background: #F9F1A5;
+}
 .custom-gutter {
   padding: 0 1px;
   height: 5px;

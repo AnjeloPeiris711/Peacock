@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f85caabf-b7b1-4987-ae71-2823f2b787cb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="5d7c3647-9ce3-41e8-9a90-867a7631dccb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Peacock" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="2H40CW0tepLF29wPcT9sVKa7Kbc" />
+  <component name="ProjectId" id="2IgAuCFON4xiiAvts8fqjw0tKsQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,62 +23,29 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../peacockbackup/pbackup" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="L:\3rdyearproject\peacock\console-application\build" />
-      <recent name="L:\3rdyearproject\peacock\console-application\dist" />
+      <recent name="L:\3rdyearproject\peacock\Peacock0.1.0\src" />
+      <recent name="L:\3rdyearproject\peacock\Peacock0.1.0\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="L:\3rdyearproject\peacock\console-application\public" />
+      <recent name="L:\3rdyearproject\peacock\Peacock0.1.0\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f85caabf-b7b1-4987-ae71-2823f2b787cb" name="Changes" comment="" />
-      <created>1667528930783</created>
+      <changelist id="5d7c3647-9ce3-41e8-9a90-867a7631dccb" name="Changes" comment="" />
+      <created>1670593074378</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1667528930783</updated>
-      <workItem from="1667528933861" duration="3285000" />
-      <workItem from="1667543728834" duration="3685000" />
-      <workItem from="1667561116888" duration="1141000" />
-      <workItem from="1667610856191" duration="8919000" />
-      <workItem from="1667800942615" duration="543000" />
-      <workItem from="1667815428331" duration="2210000" />
-      <workItem from="1667829111333" duration="3308000" />
-      <workItem from="1667869806935" duration="5531000" />
-      <workItem from="1667883393612" duration="1820000" />
-      <workItem from="1667894122815" duration="4790000" />
-      <workItem from="1667969491566" duration="2486000" />
-      <workItem from="1667985919369" duration="1687000" />
-      <workItem from="1668498563586" duration="3303000" />
-      <workItem from="1668571084618" duration="78000" />
-      <workItem from="1668584594387" duration="8786000" />
-      <workItem from="1668646194272" duration="4892000" />
-      <workItem from="1669338782082" duration="3529000" />
-      <workItem from="1669362838591" duration="7854000" />
-      <workItem from="1669424853947" duration="8515000" />
-      <workItem from="1669473667100" duration="1889000" />
-      <workItem from="1669546451568" duration="2471000" />
-      <workItem from="1669554685150" duration="7216000" />
-      <workItem from="1669596448992" duration="1353000" />
-      <workItem from="1669598444736" duration="4753000" />
-      <workItem from="1669608500555" duration="2149000" />
-      <workItem from="1669615112612" duration="3190000" />
-      <workItem from="1669627249969" duration="840000" />
-      <workItem from="1669628120628" duration="41000" />
-      <workItem from="1669628182109" duration="7886000" />
-      <workItem from="1669682820699" duration="7216000" />
-      <workItem from="1670381934304" duration="679000" />
-      <workItem from="1670392313853" duration="1684000" />
-      <workItem from="1670418657429" duration="1087000" />
+      <updated>1670593074378</updated>
+      <workItem from="1670593075631" duration="10471000" />
     </task>
     <servers />
   </component>
