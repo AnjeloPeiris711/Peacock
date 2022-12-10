@@ -1,8 +1,9 @@
 import Terminal from 'react-console-emulator'
 import commands from '../components/Commands/commands.js'
 import React from 'react'
+
 import getcat from '../components/utils/cat';
-// import getssh from '../components/utils/sshmy'
+import getssh from '../components/utils/sshmy'
 export default function Term() {
     const cmds = commands.commands
     const owrs = commands.overwrites
@@ -133,9 +134,28 @@ export default function Term() {
                     description:'SSH conection',
                     usage: 'ssh',
                     fn: async () => {
-                        // const data = await getssh()
                         terminal.current.pushToStdout("getting ssh")
-                        // terminal.current.pushToStdout(data)
+                        var SSH2Promise=require('ssh2-promise')
+                        var sshconfig = {
+                            host: '172.104.180.45',
+                            username: 'root',
+                            password: '(Ap0711@)',
+                            keepaliveInterval: 60000,
+                            keepaliveCountMax: 5
+                        }
+                        const ssh = new SSH2Promise(sshconfig);
+                        //Promise
+                        ssh.connect().then(() => {
+                            console.log("Connection established")
+                        });
+                        await ssh.connect();
+                        console.log("Connection established");
+                        //Async Await
+                        // ssh.connect();
+                        // console.log("Connection established");
+                        //Close the ssh connection
+                        //very important otherwise event leaks can happen
+                        ssh.close();
                     }
                 },
                 exit:{
