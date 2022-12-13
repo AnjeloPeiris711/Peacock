@@ -1,20 +1,17 @@
-export default async function getssh() {
-    var sshconfig = {
-        host: '172.104.180.45',
-        username: 'root',
-        password: '(Ap0711@)'
+var host = {
+    server:        {
+        host:         "172.104.180.45",
+        userName:     "junior",
+        password:     "0711",
+    },
+    commands:      [ "" ]
+};
+
+var SSH2Shell = require ('ssh2shell'),
+    SSH = new SSH2Shell(host),
+    callback = function(sessionText){
+        console.log(sessionText)
     }
-    var ssh = new SSH2Promise(sshconfig);
-//Promise
-    ssh.connect().then(() => {
-        console.log("Connection established")
-    });
-//Async Await
-    await ssh.connect();
-    console.log("Connection established");
 
-//Close the ssh connection
-//very important otherwise event leaks can happen
-    ssh.close();
-
-}
+//Start the process
+SSH.connect(callback);

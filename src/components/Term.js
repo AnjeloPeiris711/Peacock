@@ -1,9 +1,9 @@
 import Terminal from 'react-console-emulator'
 import commands from '../components/Commands/commands.js'
-import React from 'react'
-
+import React, {useEffect, useState} from 'react'
 import getcat from '../components/utils/cat';
-import getssh from '../components/utils/sshmy'
+import getssh from './utils/SSH';
+
 export default function Term() {
     const cmds = commands.commands
     const owrs = commands.overwrites
@@ -62,7 +62,7 @@ export default function Term() {
                                 return 'cannot find directory'
                             }
                         }
-                        
+
                     }
                 },
                 ls: {
@@ -134,28 +134,8 @@ export default function Term() {
                     description:'SSH conection',
                     usage: 'ssh',
                     fn: async () => {
-                        terminal.current.pushToStdout("getting ssh")
-                        var SSH2Promise=require('ssh2-promise')
-                        var sshconfig = {
-                            host: '172.104.180.45',
-                            username: 'root',
-                            password: '(Ap0711@)',
-                            keepaliveInterval: 60000,
-                            keepaliveCountMax: 5
-                        }
-                        const ssh = new SSH2Promise(sshconfig);
-                        //Promise
-                        ssh.connect().then(() => {
-                            console.log("Connection established")
-                        });
-                        await ssh.connect();
-                        console.log("Connection established");
-                        //Async Await
-                        // ssh.connect();
-                        // console.log("Connection established");
-                        //Close the ssh connection
-                        //very important otherwise event leaks can happen
-                        ssh.close();
+                        const data = await getssh()
+                        console.log(data)
                     }
                 },
                 exit:{
@@ -174,7 +154,7 @@ export default function Term() {
                 },
                 ...cmds
             }}
-            promptLabel={prompt} 
+            promptLabel={prompt}
             autoFocus
             style={{
                 backgroundColor:null,
@@ -182,7 +162,7 @@ export default function Term() {
                 maxHeight: null,
                 overflow: 'auto',
                 height: '100%',
-                width: '100%',     
+                width: '100%',
             }}
             styleEchoBack='fullInherit'
             contentStyle={{ color: '#ffb86c' , fontWeight: 'normal', paddingLeft: null}} // Text colour
