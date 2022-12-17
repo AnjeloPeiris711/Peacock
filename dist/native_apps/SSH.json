@@ -1,0 +1,9 @@
+{
+  "name":"com.peacock.ssh",
+  "description": "SSH Connection Establish",
+  "path": "app",
+  "type": "stdio",
+  "allowed_origins": [
+      "chrome-extension://eclomfoilbdpoabojaidgmnhiglocngc/"
+  ]
+}
