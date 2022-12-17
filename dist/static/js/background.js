@@ -11,10 +11,13 @@ onclickRun();
 chrome.runtime.onMessage.addListener(function (request,sender){
     if(request.type=='info')
     {
+        // Listen for messages from the app
         var port = chrome.runtime.connectNative("com.peacock.ssh")
+        //sending message
+        console.log("sending:ssh data")
         port.postMessage(request.value)
         port.onMessage.addListener(function (message){
-            console.log("" + message)
+            console.log("Recived"+message)
         })
         port.onDisconnect.addListener(function (error){
             console.log(error)
