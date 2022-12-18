@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener(function (request,sender){
         console.log("sending:ssh data")
         port.postMessage(request.value)
         port.onMessage.addListener(function (message){
-            console.log("Recived"+message)
+            console.log("Recived" + message)
         })
         port.onDisconnect.addListener(function (error){
             console.log(error)

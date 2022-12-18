@@ -30,8 +30,10 @@ try:
 
     while True:
         receivedMessage = getMessage()
-#         if receivedMessage == "123.456":
-        sendMessage(encodeMessage(" enter passwrd"))
+        sshurl = receivedMessage.split("@")
+        host = sshurl[1]
+        username = sshurl[0]
+        sendMessage(encodeMessage(host))
 except AttributeError:
     # Python 2.x version (if sys.stdin.buffer is not defined)
     # Read a message from stdin and decode it.

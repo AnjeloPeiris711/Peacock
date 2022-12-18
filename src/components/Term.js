@@ -142,17 +142,16 @@ const Term = (props) => {
                     description: 'SSH conection',
                     usage: 'ssh <directory>',
                     fn: (...args) => {
-                        let sshurlarr =  args[0]
-                        let correctsurl=(sshurlarr.split("@"))
-                        const sshurl ={
-                             username:correctsurl[0],
-                             hostname:correctsurl[1]
-                        };
+                        //let sshurlarr =  args[0]
+                        let sshurl = args[0]
+                        // const sshurl ={
+                        //      username:correctsurl[0],
+                        //      hostname:correctsurl[1]
+                        // };
                         chrome.runtime.sendMessage({
                              type:'info',
-                             //value:'ping'
-                            sshostname:sshurl.hostname,
-                            ssusername:sshurl.username
+                             value: sshurl
+
                          })
                         //console.log('hostname:'+ sshurl.hostname)
                         //console.log('username:'+ sshurl.username)
