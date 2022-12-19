@@ -4,9 +4,6 @@
     <list default="true" id="5d7c3647-9ce3-41e8-9a90-867a7631dccb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/native_apps/sshconection.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist/native_apps/sshconection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/native_apps/testnativmessaging.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist/native_apps/testnativmessaging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/native_apps/vs.bat" beforeDir="false" afterPath="$PROJECT_DIR$/dist/native_apps/vs.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/static/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/static/js/background.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +94,8 @@
       <workItem from="1671286120397" duration="1042000" />
       <workItem from="1671339665199" duration="1683000" />
       <workItem from="1671348829435" duration="1635000" />
+      <workItem from="1671360197490" duration="426000" />
+      <workItem from="1671411675268" duration="7004000" />
     </task>
     <servers />
   </component>
