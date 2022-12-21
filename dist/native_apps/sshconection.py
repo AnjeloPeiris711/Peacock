@@ -7,6 +7,9 @@ import struct
 #host = "172.104.180.45"
 #username = "junior"
 #password = "0711"
+global host
+global username
+global password
 class Communication:
     # Read a message from stdin and decode it.
     def getMessage(self):
@@ -29,7 +32,13 @@ class Communication:
         sys.stdout.buffer.write(encodedMessage['length'])
         sys.stdout.buffer.write(encodedMessage['content'])
         sys.stdout.buffer.flush()
-
+sshcom = Communication()
+class SSHConnection:
+    def host_user_Name(self):
+        pass
+    def sshpassword(self):
+        sshcom.sendMessage(sshcom.encodeMessage("Enter_Password"))
+sshcon = SSHConnection()
 # class Invoke_Shell:
 #      def Channel_Data(self):
 #         channel = client.invoke_shell()
@@ -46,33 +55,36 @@ class Communication:
 #             else:
 #                 break
 class command():
-     def User_cmd(self):
-         global output
-         #while True:
-             #shellname = inshell.hostname
-             #cmd = input(f'{shellname}')
-         cmd = "whoami"
-         #if cmd == 'exit':break
-         stdin, _stdout,_stderr = client.exec_command(cmd)
-         output = (_stdout.read().decode())
-         #return output
-             #print(_stdout.read().decode())
-
-#inshell = Invoke_Shell()
+       def User_cmd(self):
+           global output
+           #while True:
+               #shellname = inshell.hostname
+               #cmd = input(f'{shellname}')
+           cmd = "whoami"
+           #if cmd == 'exit':break
+           stdin, _stdout,_stderr = client.exec_command(cmd)
+           output = (_stdout.read().decode())
+          #return output
+              #print(_stdout.read().decode())
 usshell = command()
-sshcom = Communication()
+#inshell = Invoke_Shell()
+
 #inshell.Channel_Data()
 while True:
         receivedMessage = sshcom.getMessage()
-        sshurl = receivedMessage.split("@")
-        host = sshurl[1]
-        username = sshurl[0]
-        password = "0711"
-        client = paramiko.client.SSHClient()
-        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        client.connect(host, username=username, password=password)
+        if(receivedMessage == 'junior@172.104.180.45'):
+            sshurl = receivedMessage.split("@")
+            host = sshurl[1]
+            username = sshurl[0]
+            sshcon.sshpassword()
+        else:
+           password = receivedMessage
+           sshcom.sendMessage(sshcom.encodeMessage('ok')) 
+        # client = paramiko.client.SSHClient()
+        # client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        # client.connect(host, username=username, password=password)
+        # sshcom.sendMessage(sshcom.encodeMessage(output))
         #test = inshell.hostname
-        usshell.User_cmd()
-        sshcom.sendMessage(sshcom.encodeMessage(output))
+        # usshell.User_cmd()
         #print(output)
 # usshell.User_cmd()

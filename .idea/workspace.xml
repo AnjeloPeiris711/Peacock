@@ -4,7 +4,27 @@
     <list default="true" id="5d7c3647-9ce3-41e8-9a90-867a7631dccb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/native_apps/sshconection.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist/native_apps/sshconection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/static/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/static/js/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/index.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/has-flag/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/has-flag/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/has-flag/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/has-flag/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/supports-color/browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/supports-color/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/supports-color/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/supports-color/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/supports-color/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/templates.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/types/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +33,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,6 +69,7 @@
       <recent name="L:\3rdyearproject\peacock\Peacock0.1.0\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="L:\3rdyearproject\peacock\Peacock0.1.0\src\components\utils" />
       <recent name="L:\3rdyearproject\peacock\Peacock0.1.0\backend\native_apps" />
       <recent name="L:\3rdyearproject\peacock\Peacock0.1.0\src" />
     </key>
@@ -95,7 +124,13 @@
       <workItem from="1671339665199" duration="1683000" />
       <workItem from="1671348829435" duration="1635000" />
       <workItem from="1671360197490" duration="426000" />
-      <workItem from="1671411675268" duration="7004000" />
+      <workItem from="1671411675268" duration="14429000" />
+      <workItem from="1671432256886" duration="3359000" />
+      <workItem from="1671456541286" duration="4921000" />
+      <workItem from="1671499401822" duration="12058000" />
+      <workItem from="1671511847777" duration="4652000" />
+      <workItem from="1671535708969" duration="9550000" />
+      <workItem from="1671580717781" duration="5024000" />
     </task>
     <servers />
   </component>
