@@ -1,0 +1,29 @@
+nav{
+    background: #0078d483;
+    width: max-content;
+    display: flex;
+    padding: 0.7rem 1.77rem;
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.5rem;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+}
+nav a{
+    background:transparent;
+    padding: 0.9rem;
+    display: flex;
+    color: var(--color-light);
+    font-size: 1.1rem;
+}
+nav a.active{
+    
+    color:var(--color-white);
+}
+img{
+    width: 25px; 
+    height: 25px;   
+}

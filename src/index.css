@@ -1,164 +1,35 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  scroll-behavior: auto;
+
+/*==================== GENERAL STYLER ==================*/
+section{
+    margin-top: 8rem;
+    height: 100vh;
+}
+h1{
+    color: aliceblue;
+}
+body{
+    background: rgb(0, 0, 0);
 }
 
-body {
-  /*background-image: linear-gradient(rgba(176,0,32,1), rgba(0,0,0,1));*/
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #000000 ;
+/*=======================MEDIA QUERIES(MEDIUM DEVICES) =========================*/
+@media screen and (max-width:1024px){
+    .container{
+        width: var(--container-width-md);
+    }
+    section{
+        margin-top: 6rem;
+    }
 }
-
-.App {
-  align-self: center;
-  height: 95vh;
-  padding: 5px;
-  width: 98vw;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border:1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+/*=======================MEDIA QUERIES(SMall DEVICES) =========================*/
+@media screen and (max-width: 600px){
+    .container{
+        width: var(--containerwidth-ms);
+    }
+    section >h2{
+        margin-bottom: 2rem;
+    }
+    .btn{
+        position: absolute;
+        margin-top: 28.5rem;
+    }
 }
-
-pre {
-  color: #8be9fd;
-  padding-left: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  padding-top: 15px;
-}
-
-.head {
-  color:#ff5555;
-  font-weight: normal;
-}
-
-.cat {
-  width: 400px;
-  height: 300px;
-}
-
-
-.user-input {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #ffff;
-}
-.buttonWhite{
- background-color: white;
- border-color: black;
- width: 15px;
- height: 15px;
-}
-.buttonDark{
-  background-color: black;
-  border-color: white;
-  width: 15px;
-  height: 15px;
-}
-::-webkit-scrollbar {
-  scroll-behavior: auto;
-  width: 5px;
-  height:8px;
-
-}
-
-::-webkit-scrollbar-track {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  background-clip: content-box;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #FFFFFF;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #FFFFFF;
-}
-
-.container {
-  width: 98vw;
-  height: 95vh;
-  padding: 10px 30px 10px 10px;
-  background: linear-gradient(135deg, rgba(18, 17, 17, 0.63), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border:1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  border: 1px solid #b00020;
-}
-.split {
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-.btn1 {
-  border-radius: 15px;
-  height: 20px;
-  width: 20px;
-  float: left;
-  margin:5px;
-  background: #DDDDDD;
-}
-.btn2 {
-  border-radius: 15px;
-  height: 20px;
-  width: 20px;
-  float: left;
-  margin:5px;
-  background: #000000;
-}
-.btn3 {
-  border-radius: 15px;
-  height: 20px;
-  width: 20px;
-  float: left;
-  margin:5px;
-  background: #3B78FF;
-}
-.btn4 {
-  border-radius: 15px;
-  height: 20px;
-  width: 20px;
-  float: left;
-  margin:5px;
-  background: #B4009E;
-}
-.btn5 {
-  border-radius: 15px;
-  height: 20px;
-  width: 20px;
-  margin:5px;
-  background: #F9F1A5;
-}
-.custom-gutter {
-  padding: 0 1px;
-  height: 5px;
-  width: 5px;
-  background:rgba(128, 128, 128, 0.5);
-}
-.custom-gutter:hover {
-  cursor: col-resize;
-}
-
-.custom-dragger {
-  display: none;
-}
-

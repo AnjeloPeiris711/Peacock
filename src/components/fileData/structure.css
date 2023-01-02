@@ -1,0 +1,12 @@
+.folder{
+    justify-content: space-between;
+    cursor: pointer;
+}
+.folder > span{
+    margin:  0 5px 2px -1px;
+}
+.file{
+    flex-direction: column;
+    margin-top: 5px;
+    display: flex;
+}

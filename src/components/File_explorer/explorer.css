@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+ outline: none;
+ box-sizing: border-box;
+}
+
+:root {
+ --theme-bg-color: rgba(106, 106, 110, 0.178);
+ --border-color: rgba(113 119 144 / 25%);
+ --theme-color: #f9fafb;
+ --inactive-color: rgb(113 119 144 / 78%);
+ --body-font: "Poppins", sans-serif;
+ --hover-menu-bg: rgba(12 15 25 / 30%);
+ --content-title-color: #999ba5;
+ --content-bg: rgb(146 151 179 / 13%);
+ --button-inactive: rgb(249 250 251 / 55%);
+ --dropdown-bg: #21242d;
+ --dropdown-hover: rgb(42 46 60);
+ --popup-bg: rgb(22 25 37);
+ --search-bg:  #14162b;
+ --overlay-bg: rgba(36, 39, 59, 0.3);
+ --scrollbar-bg: rgba(222, 225, 228, 0.767);
+}
+
+
+.profile-img {
+  border: 2px solid var(--theme-bg-color)
+ }
+.content-section ul{
+  background-color: var(--theme-bg-color);
+ }
+.pop-up__title {
+  border-color: var(--theme-color);
+ }
+.dropdown.is-active ul {
+  background-color:rgb(255 255 255 / 94%);
+ }
+
+.app {
+ background-color: var(--theme-bg-color);
+ max-width: 100%;
+ max-height: 100%;
+ height: 95vh;
+ display: flex;
+ flex-direction: column;
+ overflow: hidden;
+ position: relative;
+ width: 100%;
+ border-radius: 14px;
+ backdrop-filter: blur(20px);
+ -webkit-backdrop-filter: blur(50px);
+ font-size: 15px;
+ font-weight: 500;
+
+}
+
+.header {
+ display: flex;
+ align-items: center;
+ flex-shrink: 0;
+ height: 58px;
+ width: 100%;
+ border-bottom: 1px solid var(--border-color);
+ padding: 0 30px;
+ white-space: nowrap;
+ @media screen and (max-width: 480px) {
+  padding: 0 16px;
+ }}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+}
+.header-menu a{
+   padding: 20px 30px;
+   text-decoration: none;
+   color: var(--inactive-color);
+   border-bottom: 2px solid transparent;
+   transition: 0.3s;
+   @media screen and (max-width: 610px) {
+    &:not(.main-header-link) {
+     display: none;
+    }
+   }
+  }
+
+.home {
+ width: 25px;
+ height:25px;
+ background:transparent ;
+ margin-right: 195px;
+ flex-shrink: 0;
+ @media screen and (max-width: 945px) {
+  display: none;
+ }
+}
+
+.search-bar {
+ height: 40px;
+ display: flex;
+ width: 100%;
+ max-width: 400px;
+ padding-left: 16px;
+ border-radius: 4px;
+}
+.search-bar input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #7373735d;
+  border-radius: 4px;
+  font-family: var(--body-font);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0 20px 0 40px;
+  box-shadow: 0 0 0 2px rgba(160, 132, 132, 0.02);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56.966 56.966' fill='%23717790c7'%3e%3cpath d='M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z'/%3e%3c/svg%3e");
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: 16px 48%;
+  color: var(--theme-color);
+ }
+.search-bar::placeholder {
+   font-family: var(--body-font);
+   color: var(--inactive-color);
+   font-size: 15px;
+   font-weight: 500;
+  }
+ .file_structure{
+    font-size: 21px;
+    color: #f9fafb;
+ } 
+.header-profile {
+ display: flex;
+ align-items: center;
+ padding: 0 16px 0 40px;
+ margin-left: auto;
+ flex-shrink: 0;
+}
+.header-profile svg {
+  width: 22px;
+  color: #f9fafb;
+  flex-shrink: 0;
+ }
+.profile-img {
+ width: 32px;
+ height: 32px;
+ object-fit: cover;
+ margin-left: 22px;
+ background: transparent;
+}
+
+.wide 
+ .header-menu,
+ .search-bar {
+  max-width: 600px;
+  margin: auto;
+  transition: 0.4s;
+  box-shadow: 0 0 0 1px var(--border-color);
+  padding-left: 0;
+ }
+ .menu-circle {
+  margin-right: 0;
+ }
+
+
+.wrapper {
+ display: flex;
+ flex-grow: 1;
+ overflow: hidden;
+}
+
+.left-side {
+ flex-basis: 240px;
+ border-right: 1px solid var(--border-color);
+ padding: 26px;
+ overflow: auto;
+ flex-shrink: 0;
+ @media screen and (max-width: 945px) {
+  display: none;
+ }
+}
+
+.side-wrapper + .side-wrapper {
+ margin-top: 20px;
+}
+
+.side-title {
+ color: var(--inactive-color);
+ margin-bottom: 14px;
+}
+
+
+
+.apps-card {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ width: calc(100% + 20px);
+}
+
+
+
+::-webkit-scrollbar {
+ width: 2px;
+ border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+ background: var(--scrollbar-bg);
+ border-radius: 10px;
+}

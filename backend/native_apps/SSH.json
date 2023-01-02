@@ -1,9 +1,0 @@
-{
-  "name":"com.peacock.SSH",
-  "description": "SSH Connection Establish",
-  "path": "vs.bat",
-  "type": "stdio",
-  "allowed_origins": [
-      "chrome-extension://eclomfoilbdpoabojaidgmnhiglocngc/"
-  ]
-}

@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    word-break: break-all;
+    border: 1px solid rgba(0, 0, 0, 0.274);
+  }
+  
+  .bloc-tabs {
+    display: flex;
+  }
+  .tabs {
+    padding: 6px;
+    text-align: center;
+    width: 22%;
+    left: 12px ;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+    border-radius: 8px;
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+  }
+  .tabs:hover{
+    background: rgba(90, 90, 90, 0.205);
+  }
+  .tabs:not(:last-child){
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  }
+  
+  .active-tabs  {
+    background: rgba(106, 106, 110, 0.178);
+    z-index: 1;
+
+    
+  }
+  
+  .active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 5px;
+    background: rgb(20, 20, 20);
+  }
+  
+  
+  
+  button {
+    border: none;
+    
+  }
+  .close{
+    color: rgba(221, 21, 21, 0.568);
+    background: transparent;
+    margin-left: 9rem
+  }
+  .content-tabs {
+    flex-grow : 1;
+  }
+  .content {
+    margin-top: -6px;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .active-content {
+    display: block;
+  }

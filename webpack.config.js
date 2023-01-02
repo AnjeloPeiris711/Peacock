@@ -81,15 +81,14 @@ module.exports = {
                 use:["style-loader","css-loader"]
             },
             {
-                test: /\.(png|svg|jpe?g|gif)$/,
-                include: /images/,
+                test: /\.(png|svg|jpe?g|gif|ico)$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'images/',
-                            publicPath: 'images/'
+                            outputPath: 'acessts/',
+                            publicPath: 'acessts/'
                         }
                     }
                     ]
