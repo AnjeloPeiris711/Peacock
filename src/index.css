@@ -8,7 +8,9 @@ h1{
     color: aliceblue;
 }
 body{
-    background: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background: #000
+
 }
 
 /*=======================MEDIA QUERIES(MEDIUM DEVICES) =========================*/
