@@ -2,29 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d7c3647-9ce3-41e8-9a90-867a7631dccb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/native_apps/sshconection.py" beforeDir="false" afterPath="$PROJECT_DIR$/dist/native_apps/sshconection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/native_apps/vs.bat" beforeDir="false" afterPath="$PROJECT_DIR$/dist/native_apps/vs.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/static/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/static/js/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/index.js.flow" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/license" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/has-flag/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/has-flag/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/has-flag/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/has-flag/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/supports-color/browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/supports-color/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/supports-color/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/supports-color/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/supports-color/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/templates.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/types/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,17 +38,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../electrone/electron-local-terminal-prototype-master" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="L:\3rdyearproject\peacock\Peacock0.1.0\dist\native_apps" />
       <recent name="L:\3rdyearproject\peacock\Peacock0.1.0\src" />
       <recent name="L:\3rdyearproject\peacock\Peacock0.1.0\src\components" />
     </key>
@@ -130,7 +114,36 @@
       <workItem from="1671499401822" duration="12058000" />
       <workItem from="1671511847777" duration="4652000" />
       <workItem from="1671535708969" duration="9550000" />
-      <workItem from="1671580717781" duration="5024000" />
+      <workItem from="1671580717781" duration="5280000" />
+      <workItem from="1671605601725" duration="56000" />
+      <workItem from="1671696247542" duration="109000" />
+      <workItem from="1671696375915" duration="1537000" />
+      <workItem from="1671786958385" duration="713000" />
+      <workItem from="1671802869397" duration="52000" />
+      <workItem from="1671803254642" duration="3431000" />
+      <workItem from="1671810259247" duration="43000" />
+      <workItem from="1671846531820" duration="601000" />
+      <workItem from="1671850995297" duration="577000" />
+      <workItem from="1672017695091" duration="1188000" />
+      <workItem from="1672027774905" duration="272000" />
+      <workItem from="1672101763085" duration="3777000" />
+      <workItem from="1672138621390" duration="17000" />
+      <workItem from="1672202262082" duration="202000" />
+      <workItem from="1672202908448" duration="4130000" />
+      <workItem from="1672207261751" duration="1191000" />
+      <workItem from="1672295151891" duration="320000" />
+      <workItem from="1672331018153" duration="5000" />
+      <workItem from="1672374594884" duration="2711000" />
+      <workItem from="1672380577032" duration="1259000" />
+      <workItem from="1672407358723" duration="13000" />
+      <workItem from="1672408633778" duration="73000" />
+      <workItem from="1674035880990" duration="10000" />
+      <workItem from="1674035925289" duration="4000" />
+      <workItem from="1674100021740" duration="81000" />
+      <workItem from="1674100135987" duration="295000" />
+      <workItem from="1674379012444" duration="76000" />
+      <workItem from="1674379111497" duration="191000" />
+      <workItem from="1674455331739" duration="132000" />
     </task>
     <servers />
   </component>

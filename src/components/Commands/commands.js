@@ -54,7 +54,7 @@ export default {
             exit:{
                 description:'Leave the terminal ',
                 usage: 'exit',
-            }
+            },
         }
 
 }

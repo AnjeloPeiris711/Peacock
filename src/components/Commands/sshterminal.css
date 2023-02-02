@@ -1,0 +1,54 @@
+.terminal-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 94vh;
+    overflow: auto;
+    background-color: rgba(255, 0, 106, 0.055);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    color: rgb(23, 224, 33);
+    font-family: monospace;
+    z-index: 20;
+}
+  
+  .terminal-output {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+  }
+  
+  .terminal-input-container {
+    display: flex;
+    background-color:  rgba(107, 104, 104, 0.308);
+    padding: 10px;
+  }
+  .prompt{
+    padding: 5px;
+  }
+  .terminal-input {
+    flex: 1;
+    background-color: rgba(54, 3, 24, 0.274);
+    color: #fff;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .terminal-submit-button {
+    background-color: rgba(54, 3, 24, 0.808);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .terminal-command {
+    font-weight: bold;
+  }
+  
+  .terminal-result {
+    margin-top: 5px;
+  }
+  

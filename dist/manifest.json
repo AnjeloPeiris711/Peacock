@@ -13,8 +13,10 @@
   "background": {
     "service_worker": "/static/js/background.js"
   },
+  "options_page":"/static/option/option.html",
   "permissions": [
     "tabs",
-    "nativeMessaging"
+    "nativeMessaging",
+    "storage"
   ]
 }
