@@ -4,6 +4,8 @@ import os
 import sys
 import json
 import struct
+import subprocess
+from subprocess import call
 # host = "172.104.180.45"
 # username = "junior"
 # password = "0711"
@@ -29,26 +31,46 @@ class Communication:
         sys.stdout.buffer.write(encodedMessage['length'])
         sys.stdout.buffer.write(encodedMessage['content'])
         sys.stdout.buffer.flush()
+
 sshcom = Communication()
+class USBIP:
+    def __init__(self):
+        self.usbip_process = None
+
+    def start_usbipd(self):
+        self.usbip_process = subprocess.Popen(['python', 'usbIP.py'])
+    
+    def stop_usbipd(self):
+        if self.usbip_process is not None:
+            self.usbip_process.terminate()
+            self.usbip_process = None
+    # def call_usbipd(self):
+    #     call(['python','usbIP.py'])
+usbIP = USBIP()
 class SSHConnection:
     def host_user_Name(self,sshMainData):
         sshurl = sshMainData.split("@")
         self.host = sshurl[1]
         self.username = sshurl[0]
+
     def getpassword(self):
         sshcom.sendMessage(sshcom.encodeMessage("Enter_Password"))
+
     def sshpassword(self,sshPassd):
         self.password = sshPassd
 sshcon = SSHConnection()
 class command():
-    def User_cmd(self,ok):
+    def User_cmd(self,usercommand):
         #while True:
             #shellname = inshell.hostname
-            #cmd = input(f'{shellname}')
-            cmd = "whoami"
-            #if cmd == 'exit':break
-            stdin, _stdout,_stderr = client.exec_command(cmd)
-            self.output = (_stdout.read().decode())
+            cmd = usercommand
+            #cmd = "whoami"
+            if cmd == 'exit': 
+                exit()
+            else :
+                stdin, _stdout,_stderr = client.exec_command(cmd)
+            #self.output = (_stdout.read().decode())
+                sshcom.sendMessage(sshcom.encodeMessage(_stdout.read().decode()))
           #return output
               #print(_stdout.read().decode())
     def InvokeShell(self,channel):
@@ -66,11 +88,11 @@ class command():
 usshell = command()
 while True:
         receivedMessage = sshcom.getMessage()
-        if(receivedMessage == "junior@172.104.180.45"):
+        if(receivedMessage == "root@172.104.180.45"):
             sshcon.host_user_Name(receivedMessage)
             #raise Exception("error")
             sshcon.getpassword()
-        else:
+        elif(receivedMessage == "(Ap0711@)"):
            sshcon.sshpassword(receivedMessage)
            client = paramiko.client.SSHClient()
            client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -78,7 +100,13 @@ while True:
                 client.connect(sshcon.host, username=sshcon.username, password=sshcon.password)
            except:
                 sshcom.sendMessage(sshcom.encodeMessage("wrong username or password"))
-                channel = client.invoke_shell()
-                usshell.InvokeShell(channel)
+                #channel = client.invoke_shell()
+                #usshell.InvokeShell(channel)
+           sshcom.sendMessage(sshcom.encodeMessage("SSH_Connection_Established"))
+        elif(receivedMessage == "usb"):
+            usbIP.start_usbipd()
+        else:   
+            usshell.User_cmd(receivedMessage) 
+           #sshcom.sendMessage(sshcom.encodeMessage(usshell.output))
            #sshcom.sendMessage(sshcom.encodeMessage(sshcon.host)) 
            #sshcom.sendMessage(sshcom.encodeMessage(usshell.output)) 

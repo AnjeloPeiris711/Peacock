@@ -31,6 +31,17 @@ chrome.runtime.onMessage.addListener(function (request,sender,sendResponse){
     if (request.type == 'password') {
         console.log("sending:password " +request.value)
         port.postMessage(request.value)
+        // port.onMessage.addListener(function (message) {
+        //     console.log("Recivedssh:" + message)
+        //     chrome.runtime.sendMessage({
+        //         type: 'command',
+        //         value: message
+        //     })
+        // })
+    }
+    if (request.type == 'sshcommand') {
+        console.log("sending:command " +request.value)
+        port.postMessage(request.value)
         port.onMessage.addListener(function (message) {
             console.log("Recivedssh:" + message)
             chrome.runtime.sendMessage({
@@ -38,6 +49,14 @@ chrome.runtime.onMessage.addListener(function (request,sender,sendResponse){
                 value: message
             })
         })
+    }
+    if (request.type == 'USBInfo') {
+        port.postMessage(request.value)
+    }
+    if (request.type == 'exit') {
+        port.postMessage(request.value)
+        console.log("port disconnect")
+        disconnect()
     }
     port.onDisconnect.addListener(function (error){
         console.log(error)

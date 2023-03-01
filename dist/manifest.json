@@ -13,10 +13,14 @@
   "background": {
     "service_worker": "/static/js/background.js"
   },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; worker-src 'self'"
+  },
   "options_page":"/static/option/option.html",
   "permissions": [
     "tabs",
     "nativeMessaging",
-    "storage"
+    "storage",
+    "alarms"
   ]
 }

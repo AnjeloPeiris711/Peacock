@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=L:\3rdyearproject\peacock\Peacock0.1.0\backend\serverapi
+set VIRTUAL_ENV=L:\3rdyearproject\peacock\Peacock0.1.0\dist\native_apps\serverapi
 
 if not defined PROMPT set PROMPT=$P$G
 

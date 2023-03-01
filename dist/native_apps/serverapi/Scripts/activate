@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="L:\3rdyearproject\peacock\Peacock0.1.0\backend\serverapi"
+VIRTUAL_ENV="L:\3rdyearproject\peacock\Peacock0.1.0\dist\native_apps\serverapi"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

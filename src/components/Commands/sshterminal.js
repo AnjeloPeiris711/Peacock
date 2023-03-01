@@ -1,6 +1,14 @@
-import React, { useState,useRef } from 'react';
+import React, { useState,useRef,useEffect} from 'react';
 import './sshterminal.css'
 const sshterminal = (props) => {
+  const [indata,setindata]= useState('')
+  chrome.runtime.onMessage.addListener(function (request) {
+    if(request.type == 'command'){
+      console.log(request.value)
+      setOutput([...output, { command: indata, result: `|->${request.value}` }])
+
+  }
+  })
   const handleExit = () => {
     props.onExit();
   };
@@ -17,19 +25,19 @@ const sshterminal = (props) => {
       termdisplay.current.style.display = "none";
     } 
     else {
-      setOutput([...output, { command: inputValue, result: `You entered: ${inputValue}` }]);
+      props.onSubmit(inputValue)
+      setindata(inputValue)
     }
 
     setInputValue('');
   };
-
   return (
     <div ref={termdisplay}className="terminal-container">
       <div className="terminal-output">
         {output.map((item, index) => (
           <div key={index}>
             <p className="terminal-command">{item.command}</p>
-            <p className="terminal-result">{item.result}</p>
+            <pre className="terminal-result">{item.result}</pre>
           </div>
         ))}
       </div>
@@ -48,5 +56,4 @@ const sshterminal = (props) => {
     </div>
   );
 };
-
 export default sshterminal ;
