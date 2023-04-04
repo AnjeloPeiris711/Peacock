@@ -173,7 +173,8 @@ export default function Term() {
                         //  })
                         chrome.runtime.sendMessage({
                             type:'info',
-                            value: sshurl
+                            value: 'sshinfo'+sshurl
+
                         })
                         chrome.runtime.onMessage.addListener(function (request) {
                             if (request.type == 'data') {
@@ -182,7 +183,7 @@ export default function Term() {
                                     const pass = RouterPrompt()
                                     chrome.runtime.sendMessage({
                                         type: 'password',
-                                        value: pass
+                                        value: 'sshpss'+pass
                                     })
 
                                 }
@@ -290,11 +291,11 @@ export default function Term() {
                     fn: async () => {
                         try {
                             const devices = await navigator.usb.requestDevice({filters:[]});
-                            console.log({ vendorId: devices.vendorId.toString(16), productId: devices.productId.toString(16)});
+                            console.log({ vendorId: devices.vendorId.toString(16).padStart(4, '0'), productId: devices.productId.toString(16).padStart(4, '0')});
                             try{
                                 chrome.runtime.sendMessage({
                                     type:'USBInfo',
-                                    value: 'usb'
+                                    value: 'BUSvid'+devices.vendorId.toString(16).padStart(4, '0')+'pid'+ devices.productId.toString(16).padStart(4, '0')
                                 })
                             }catch(error){
                                 terminal.current.pushToStdout(alert('please Use SSH Connection first'))

@@ -1,0 +1,64 @@
+{
+  "Devices": [
+    {
+      "BusId": "2-5",
+      "ClientIPAddress": null,
+      "ClientWslInstance": null,
+      "Description": "USB Input Device",
+      "InstanceId": "USB\\VID_0B05&PID_1845\\5&13359116&0&5",
+      "IsForced": false,
+      "PersistedGuid": null,
+      "StubInstanceId": null
+    },
+    {
+      "BusId": "2-10",
+      "ClientIPAddress": null,
+      "ClientWslInstance": null,
+      "Description": "USB Input Device",
+      "InstanceId": "USB\\VID_0B05&PID_1866\\5&13359116&0&10",
+      "IsForced": false,
+      "PersistedGuid": null,
+      "StubInstanceId": null
+    },
+    {
+      "BusId": "2-4",
+      "ClientIPAddress": null,
+      "ClientWslInstance": null,
+      "Description": "USB Audio Device, USB Input Device",
+      "InstanceId": "USB\\VID_0D8C&PID_0012\\5&13359116&0&4",
+      "IsForced": false,
+      "PersistedGuid": "a33e06ee-b7d3-43b9-ad16-d75ae92f3ee8",
+      "StubInstanceId": null
+    },
+    {
+      "BusId": null,
+      "ClientIPAddress": null,
+      "ClientWslInstance": null,
+      "Description": "USB Mass Storage Device",
+      "InstanceId": "USB\\VID_125F&PID_C08A\\1532322092110195",
+      "IsForced": false,
+      "PersistedGuid": "9cd1c58c-80ef-4c9e-9add-5a7106972653",
+      "StubInstanceId": null
+    },
+    {
+      "BusId": "2-3",
+      "ClientIPAddress": null,
+      "ClientWslInstance": null,
+      "Description": "USB Input Device",
+      "InstanceId": "USB\\VID_413C&PID_301D\\5&13359116&0&3",
+      "IsForced": false,
+      "PersistedGuid": null,
+      "StubInstanceId": null
+    },
+    {
+      "BusId": "2-14",
+      "ClientIPAddress": null,
+      "ClientWslInstance": null,
+      "Description": "Intel(R) Wireless Bluetooth(R)",
+      "InstanceId": "USB\\VID_8087&PID_0026\\5&13359116&0&14",
+      "IsForced": false,
+      "PersistedGuid": null,
+      "StubInstanceId": null
+    }
+  ]
+}

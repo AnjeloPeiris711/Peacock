@@ -53,6 +53,9 @@ chrome.runtime.onMessage.addListener(function (request,sender,sendResponse){
     if (request.type == 'USBInfo') {
         port.postMessage(request.value)
     }
+    if (request.type == 'uplordfiledata'){
+        port.postMessage(request.value)
+    }
     if (request.type == 'exit') {
         port.postMessage(request.value)
         console.log("port disconnect")
