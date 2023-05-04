@@ -189,19 +189,33 @@
 .side-title {
  color: var(--inactive-color);
  margin-bottom: 14px;
+ margin-left: 1rem;
 }
 
+.side-title-refesh{
+  margin-left: -0.5rem;
+  margin-top: -2rem;
 
-
+}
+.side-title-reimg{
+  width: 20px;
+  height: 20px;
+}
+.downlord{
+  background-color: rgba(153, 0, 255, 0.801);
+  border-radius: 15px;
+  color: #d095df;
+}
+.downlord:hover {
+  background-color: #a700e6;
+  color: #fff;
+}
 .apps-card {
  display: flex;
  align-items: center;
  flex-wrap: wrap;
  width: calc(100% + 20px);
 }
-
-
-
 ::-webkit-scrollbar {
  width: 2px;
  border-radius: 10px;

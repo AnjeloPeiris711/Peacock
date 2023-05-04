@@ -1,6 +1,7 @@
-const path =require('path');
+const path = require('path');
 const webpack = require('webpack')
 const dotenv = require('dotenv');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = (env) => {
     // Get the root path (assuming your webpack config is in the root of your project!)
@@ -62,6 +63,18 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: './src/index.html'
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+            { 
+              from: 'src/components/fileData/file.json', 
+              to: 'data/file.json',
+            },
+            { 
+                from: 'src/components/fileData/file.txt', 
+                to: 'data/file.txt',
+              },
+            ]
+          }),
     ],
     module: {
         rules: [
@@ -96,6 +109,11 @@ module.exports = {
             {
                 test: /.node$/,
                 use: 'node-loader'
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader',
+                type: 'javascript/auto'
             }
         ]
     }

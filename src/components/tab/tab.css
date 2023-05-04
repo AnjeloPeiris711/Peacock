@@ -71,7 +71,7 @@ button {
 .close{
     color: rgba(221, 21, 21, 0.568);
     background: transparent;
-    margin-left:  15rem;
+    margin-left:  10rem;
     margin-bottom: 1px;
     font-size: 12px;
     z-index: 2;

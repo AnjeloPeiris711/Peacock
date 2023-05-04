@@ -1,0 +1,67 @@
+.terminal {
+    background-color: rgba(106, 106, 110, 0.178);
+    color: rgb(157, 59, 182);
+    font-family: monospace;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 19px;
+}
+  
+  .terminal-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px;
+    background-color: rgb(50,50,50);
+    padding-left: 77rem ;
+  }
+  
+  .red-circle, .yellow-circle, .green-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 30%;
+    margin-right: 5px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.986);
+    font-size: 13px;
+  }
+  
+  .red-circle {
+    background-color: rgb(255,69,69);
+  }
+  
+  .yellow-circle {
+    background-color: rgb(255,213,79);
+  }
+  
+  .green-circle {
+    background-color: rgb(124,252,0);
+  }
+  .welocmemessage{
+    font-size: 30px;
+    margin-top: -4rem;
+  }
+  .profile{
+    width: 70px; 
+    height: 70px;
+    transform: rotate3d(0, 2, 0.5, 0rad);
+  }
+  .terminal-body {
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  .terminal-line {
+    margin-bottom: 5px;
+  }
+  
+  .prompt {
+    color: rgb(0,255,0);
+    margin-right: 5px;
+  }
+  
+  .output {
+    color: rgb(177, 187, 218);
+  }
+  

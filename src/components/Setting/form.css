@@ -27,14 +27,15 @@ label {
 }
 .col-25 {
   float: left;
-  width: 25%;
+  width: 20%;
   margin-top: 6px;
 }
 
 .col-75 {
   float: left;
-  width: 75%;
+  width: 70%;
   margin-top: 6px;
+  margin-left: 2rem;
 }
 
 /* Clear floats after the columns */
@@ -52,7 +53,7 @@ label {
   display: inline-block;
   width: 60px;
   height: 34px;
-  left: 66.5rem;
+  left: 59.5rem;
 }
 
 .switch input { 
@@ -84,7 +85,9 @@ label {
   -webkit-transition: .4s;
   transition: .4s;
 }
-
+.SSHKEY{
+  height: 200px;
+}
 input:checked + .slider {
   background-color: #21f38a7a;
 }

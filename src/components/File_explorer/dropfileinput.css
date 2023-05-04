@@ -1,0 +1,87 @@
+
+.dropzone-content{
+    color: rgb(235, 215, 34);
+    margin-top: -2rem;
+}
+.drop-file-preview__item{
+    color: green;
+}
+.remove{
+    color: rgba(199, 12, 12, 0.863);
+    margin-left: 15px;
+    background: none;
+    font-size: medium;
+}
+.logo{
+  position:relative;
+  height:100px;
+  width:100px;
+  margin-left: 7rem;
+}
+.logoimg{
+    width: 500px;
+    height: 500px;
+    margin-left: -18rem;
+    margin-top: -8rem;
+    z-index: -30;
+    opacity: 0.2;
+}
+ul{
+    position: relative;
+    margin: 100px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+ul li{
+    display: flex;
+    background: rgba(255,255,255,.1);
+    padding: 10px 20px;
+    color: #fff;
+    margin: 5px 0;
+    transition: .5s;
+    border-radius: 10px;
+    border: 2px solid #21a4ad;
+
+}
+
+ul li:hover{
+    transform: scale(1.06);
+    background: rgba(34, 255, 71, 0.514);
+    border: 2px solid #21ad21;
+}
+
+.ubutton {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 16.5rem;
+    margin-top: -10rem;
+    padding: 0.7rem 3.125rem;
+    background-color: rgba(0, 255, 55, 0.767);
+    border: none;
+    border-radius: 0.3125rem; 
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+    
+    box-shadow:
+    0 -1.25rem 1rem -1.5rem rgba(black, 0.4),
+    0 0.5rem 1.75rem -0.25rem rgba(black, 0.3),
+    0 1.25rem 2.5rem rgba(black, 0.2);
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    overflow: hidden; 
+    
+} 
+.ubutton :hover{
+    color: #dde6dd;
+}
+.uplordicon{
+  position: fixed;
+  margin-left: -9rem;
+}
+.uplordicon :hover{
+    filter: invert(100%); 
+    -webkit-filter: invert(100%)
+}  
