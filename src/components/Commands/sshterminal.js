@@ -42,7 +42,7 @@ const sshterminal = (props) => {
         ))}
       </div>
       <form onSubmit={handleSubmit} className="terminal-input-container">
-        <p className='prompt'>{'junior>'}</p>
+        <p className='prompt'>{'root>'}</p>
         <input
           type="text"
           value={inputValue}

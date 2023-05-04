@@ -47,7 +47,7 @@ module.exports = {
             "dns":false,
             "os": false,
             "readline":false,
-            "child_process":false
+            "child_process":false,
         }
     },
     entry: './src/index.js',

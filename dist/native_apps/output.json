@@ -27,7 +27,7 @@
       "Description": "USB Audio Device, USB Input Device",
       "InstanceId": "USB\\VID_0D8C&PID_0012\\5&13359116&0&4",
       "IsForced": false,
-      "PersistedGuid": "a33e06ee-b7d3-43b9-ad16-d75ae92f3ee8",
+      "PersistedGuid": null,
       "StubInstanceId": null
     },
     {

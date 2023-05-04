@@ -56,6 +56,19 @@ chrome.runtime.onMessage.addListener(function (request,sender,sendResponse){
     if (request.type == 'uplordfiledata'){
         port.postMessage(request.value)
     }
+    if (request.type == 'requestSFile'){
+        port.postMessage(request.value)
+    }
+    if (request.type == 'Serverfiledata'){
+        port.postMessage(request.value)
+        port.onMessage.addListener(function (message) {
+            console.log("severfile:"+ message)
+            chrome.runtime.sendMessage({
+                type:'Sfile_data',
+                value: message
+            })
+        })
+    }
     if (request.type == 'exit') {
         port.postMessage(request.value)
         console.log("port disconnect")
@@ -66,3 +79,4 @@ chrome.runtime.onMessage.addListener(function (request,sender,sendResponse){
         console.log("last error:" + chrome.runtime.lastError.message)
     })
 })
+

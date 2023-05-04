@@ -84,12 +84,16 @@ class Comunication:
 	def uplord(self,c):
 			try:
 				print("file uploading....")
-				self.file_size = os.path.getsize("file")
-				#ReadFile = os.path.abspath("PFTP/file")
-				with open("file","rb") as f:
-					file_data = f.read()
+				#self.file_size = os.path.getsize("file")
+				ReadFile = os.path.abspath("PFTP/file")
+				try:
+					with open(ReadFile,"rb") as f:
+						file_data = f.read()
+						print(file_data)
+				except:
+					pass
 				self.encrypted_file_data = rsa.encrypt(file_data,self.transfer.public_partner)
-				self.transfer.client.send("file.txt".encode())
+				self.transfer.client.send("new.png".encode())
 				#self.client.send(str(self.file_size))
 				self.transfer.client.sendall(self.encrypted_file_data)
 				self.transfer.client.send(b"<END>")

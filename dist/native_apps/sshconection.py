@@ -7,12 +7,27 @@ import time
 import json
 import struct
 import base64
+import logging
 import paramiko
 import subprocess
 from subprocess import call
+from PFTP import PeacockClient
 # host = "172.104.180.45"
 # username = "junior"
 # password = "0711"
+class Log:
+	def __init__(self):
+		self.logger = None
+	def log_Data(self):
+		logging.basicConfig(level=logging.DEBUG)
+		self.logger =  logging.getLogger("sshconection")
+		file_handler = logging.FileHandler("logfile.log")
+		file_handler.setLevel(logging.INFO)
+		self.logger.addHandler(file_handler)
+
+log = Log()
+log.log_Data()
+
 class Communication:
     # Read a message from stdin and decode it.
     def getMessage(self):
@@ -46,8 +61,9 @@ class USBIP:
 
     def athenticusbip(self):
         try:
-            process=subprocess.Popen(['python',"PFTP/pft.py","func1"],stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            stdout, stderr = process.communicate()
+            #process=subprocess.Popen(['python',"PFTP/pft.py","func1"],stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            #stdout, stderr = process.communicate()
+            PeacockClient.start()
         except:
             pass  
     def get_state(self,v_id,p_id):
@@ -89,6 +105,7 @@ class SSHConnection:
         self.password = sshPassd
 sshcon = SSHConnection()
 class PecockFileTransfer:
+    
     def CreateFile(self,bse64Data):
         content = bse64Data
         metadata, encoded_data = content.split(',', 1)
@@ -98,7 +115,8 @@ class PecockFileTransfer:
         extension = file_type.split('/')[1] if '/' in file_type else file_type
         with open(f'PFTP/file.{extension}', 'wb') as f:
             f.write(file_obj.getbuffer())
-        self.callPFT()
+        #self.callPFT()
+        self.shareFile()
     def callPFT(self):
         try:
             #subprocess.Popen(["python", "PFTP/pft.py","func2"])
@@ -107,7 +125,87 @@ class PecockFileTransfer:
             stdout, stderr = process.communicate()
             
         except:
-            pass  
+            pass
+    def shareFile(self):
+        PeacockClient.UpPeacock()
+    def downlordFile(self,filename):
+        PeacockClient.DownPeacock(filename)
+    def get_directory_tree(self):
+        #PeacockClient.DownPeacock()
+        stdin, stdout, stderr = client.exec_command('ls -l /root')
+# create directory tree object
+        tree = {'id': '1', 'name': 'root', 'isFolder': 'true', 'items': []}
+
+# parse directory listing
+        for line in stdout:
+            if line.startswith('total'):
+                continue
+
+            parts = line.split()
+            name = parts[-1]
+
+            if name.startswith('.'):
+                continue
+
+            is_folder = parts[0].startswith('d')
+            item = {'id': len(tree['items']) + 1, 'name': name, 'isFolder': str(is_folder).lower()}
+
+            if is_folder:
+                # recursively get the subdirectory tree
+                stdin2, stdout2, stderr2 = client.exec_command('ls -l /' + name)
+                item['items'] = []
+                for subline in stdout2:
+                    if subline.startswith('total'):
+                        continue
+
+                    subparts = subline.split()
+                    subname = subparts[-1]
+
+                    if subname.startswith('.'):
+                        continue
+
+                    subis_folder = subparts[0].startswith('d')
+                    subitem = {'id': len(item['items']) + 1, 'name': subname, 'isFolder': str(subis_folder).lower()}
+
+                    if subis_folder:
+                        # recursively get the subdirectory tree
+                        stdin3, stdout3, stderr3 = client.exec_command('ls -l /' + name + '/' + subname)
+                        subitem['items'] = []
+                        for subsubline in stdout3:
+                            if subsubline.startswith('total'):
+                                continue
+
+                            subsubparts = subsubline.split()
+                            subsubname = subsubparts[-1]
+
+                            if subsubname.startswith('.'):
+                                continue
+
+                            subsubis_folder = subsubparts[0].startswith('d')
+                            subsubitem = {'id': len(subitem['items']) + 1, 'name': subsubname, 'isFolder': str(subsubis_folder).lower()}
+
+                            subitem['items'].append(subsubitem)
+
+                    item['items'].append(subitem)
+
+            tree['items'].append(item)
+
+# serialize directory tree as a JSON string
+        json_string = json.dumps(tree, indent=2)
+
+        try:
+            dir_path = os.path.dirname(os.path.abspath(__file__))
+        except:
+            log.logger.info("dir path error")
+        try:
+            file_path = os.path.join(dir_path, '..', 'static','option','data', 'file.json')
+        except:
+            log.logger.info("file path error")
+        try:
+            with open(file_path, 'w') as f:
+                f.write(json_string)
+        except:
+             log.logger.info("file open error")
 pft = PecockFileTransfer()
 class command():
     def __init__(self):
@@ -172,7 +270,7 @@ class command():
             time.sleep(1)
     def InvokeShell(self,invokeshellcommand):
             try: 
-                sshcom.sendMessage(sshcom.encodeMessage(self.end))   
+                #sshcom.sendMessage(sshcom.encodeMessage(self.values))   
                 channel.send(invokeshellcommand+ '\n')
                 usshell.Invokeshelloutput()
             except:
@@ -213,6 +311,10 @@ while True:
             usbIP.get_state(vid_match,pid_match)
         elif(receivedMessage.startswith("upfd") and receivedMessage[4:]):
             pft.CreateFile(receivedMessage[4:])
+        elif(receivedMessage == "dowfd"):
+            pft.get_directory_tree()
+        elif(receivedMessage.startswith("fname") and receivedMessage[5:]):
+            pft.downlordFile(receivedMessage[5:])
         else:   
             #usshell.InvokeShell(receivedMessage)
            usshell.User_cmd(receivedMessage)

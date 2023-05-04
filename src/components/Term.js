@@ -11,9 +11,9 @@ export default function Term() {
     const owrs = commands.overwrites
     const terminal = React.createRef()
     const [prompt, setPrompt] = React.useState("Peac(🦚)ck>")
-    const [home, sethome] = React.useState('ashterm')
+    const [home, sethome] = React.useState('peaterm')
     const [dir, setdir] = React.useState({
-        'ashterm': []
+        'peaterm': []
     })
     const [data,setdata]=React.useState(1)
     const [usbInfo, setUsbInfo] = useState({});
@@ -28,9 +28,9 @@ export default function Term() {
     return (
         <Terminal
             ref={terminal}
-            welcomeMessage={[
+            welcomeMessage={
                 <img src={`data:image/png;base64,${welcomeimgae}`} width="100px" height="80px"/>
-            ]}
+            }
             commands={{
                 clear: {
                     description: 'Clears the terminal',
@@ -117,7 +117,7 @@ export default function Term() {
                 },
                 theam: {
                     description: 'Change Theam',
-                    usage: 'team',
+                    usage: 'theam',
                     fn: () => {
                         function white(e) {
                             document.body.style.background = '#ffffff'
@@ -179,22 +179,64 @@ export default function Term() {
                         chrome.runtime.onMessage.addListener(function (request) {
                             if (request.type == 'data') {
                                 console.log("Recived html:" + request.value)
-                                if (request.value === "Enter_Password") {
-                                    const pass = RouterPrompt()
-                                    chrome.runtime.sendMessage({
-                                        type: 'password',
-                                        value: 'sshpss'+pass
-                                    })
+                                if (request.value === "Enter_Password") 
+                                {
+                                    function PasswordVisibility(){
+                                        var passwordField = document.getElementById("paswwordTxt");
+                                        if (passwordField.type === "password") {
+                                                passwordField.type = "text";
+                                        } else {
+                                                passwordField.type = "password";
+                                        }
+                                    }
+                                    function submit(e) {
+                                        e.preventDefault(); 
+                                        const passwordField = document.getElementById("paswwordTxt");
+                                        const pass = passwordField.value;
+                                        console.log("Password", pass);
+                                        chrome.runtime.sendMessage({
+                                            type: 'password',
+                                            value: 'sshpss'+pass
+                                        })
 
-                                }
-                                if (request.value === "SSH_Connection_Established"){
-                                    // chrome.runtime.sendMessage({
-                                    //     type:'sshcommand',
-                                    //     value: inputValue
-                                    // })
+                                        
+                                    }
+                                    terminal.current.pushToStdout(
+                                        <div style={{position: 'relative'}}>
+                                            <input 
+                                                name="searchTxt" 
+                                                type="password" 
+                                                id="paswwordTxt"
+                                                placeholder="Enter Password" 
+                                                style={{background:'transparent',color:'green',     border: 'none'}}
+                                            />
+                                            <input 
+                                                type="checkbox" 
+                                                onClick={PasswordVisibility} 
+                                                style={{margin:'1rem'}}/>Show Password
+                                            <br/>
+                                            <button 
+                                                onClick={submit}
+                                                id ="visibiltybutton"
+                                                style={{background:'#fff',width:'8rem',height:'1rem',borderRadius:'30px'}}>Enter
+                                            </button>
+                                        </div>
+                                    )
                                     terminal.current.pushToStdout(<SShTerminal onExit={handleExit} onSubmit={sendItems}/>)
-                                    setread(true) 
+                                    setread(true)
                                 }
+                            if(request.value === "wrong username or password"){
+                                terminal.current.pushToStdout(alert("wrong username or password"))
+                                
+                            }
+                                // if (request.value === "SSH_Connection_Established"){
+                                //     // chrome.runtime.sendMessage({
+                                //     //     type:'sshcommand',
+                                //     //     value: inputValue
+                                //     // })
+                                //     terminal.current.pushToStdout(<SShTerminal onExit={handleExit} onSubmit={sendItems}/>)
+                                //     setread(true) 
+                                // }
                             }
 
                             // if(request.type == 'command'){
@@ -232,6 +274,7 @@ export default function Term() {
                     //       await eel.sendData("work")
                     //   }
                     // }
+                
                     function PasswordVisibility(){
                         var passwordField = document.getElementById("paswwordTxt");
                         if (passwordField.type === "password") {
@@ -241,9 +284,13 @@ export default function Term() {
                         }
                     }
                     function submit(e) {
-                            console.log(passwordValue)
-                            setread(false)
+                            e.preventDefault(); // prevent the form from submitting and refreshing the page
+                            const passwordField = document.getElementById("paswwordTxt");
+                            const password = passwordField.value;
+                            console.log("Paread", password);
+                            terminal.current.pushToStdout("hi")
                         }
+                    function test() {
                         terminal.current.pushToStdout(
                             <div style={{position: 'relative'}}>
                                 <input 
@@ -261,14 +308,15 @@ export default function Term() {
                                 <button 
                                     onClick={submit}
                                     id ="visibiltybutton"
-                                    style={{background:'#009900',width:'8rem',height:'1rem',borderRadius:'30px',display:'none'}}>
+                                    style={{background:'#fff',width:'8rem',height:'1rem',borderRadius:'30px'}}>
                                 </button>
                             </div>)
-                        setread(true)
-
-                       
-                    }
-
+                        }
+                        test()
+                        
+                    
+                }
+  
                 },
                 disconnect: {
                     description: 'Disconnect the USB',
