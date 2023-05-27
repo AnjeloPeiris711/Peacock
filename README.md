@@ -29,4 +29,4 @@ $ npm start
 ```
 
 ### DEMO
-![Demo Video](./video/Usbip.mp4)
+![Demo Video](/video/Usbip.mp4)
