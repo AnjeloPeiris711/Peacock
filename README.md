@@ -30,5 +30,9 @@ $ npm start
 
 ### DEMO
 ![Demo Video](./video/Usbip.mp4)
-<video src="./video/Usbip.mp4" controls="controls" style="max-width: 730px;">
+<video src="./video/Usbip.mp4
+
+https://github.com/AnjeloPeiris711/Peacock/assets/51872510/dd5e2316-6a20-4053-8382-ec395dfd6a13
+
+" controls="controls" style="max-width: 730px;">
 </video>
