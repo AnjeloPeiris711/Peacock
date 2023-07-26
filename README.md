@@ -29,8 +29,8 @@ $ npm start
 ```
 
 ### DEMO
-<video 
+
 
 https://github.com/AnjeloPeiris711/Peacock/assets/51872510/dd5e2316-6a20-4053-8382-ec395dfd6a13
 
-</video>
+
