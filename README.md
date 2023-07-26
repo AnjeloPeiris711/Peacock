@@ -30,7 +30,9 @@ $ npm start
 
 ### DEMO
 
-
+#### USB Virtualization
 https://github.com/AnjeloPeiris711/Peacock/assets/51872510/dd5e2316-6a20-4053-8382-ec395dfd6a13
 
+#### File Transfer
+https://github.com/AnjeloPeiris711/Peacock/blob/Development/video/peacockdownlord.mp4
 
